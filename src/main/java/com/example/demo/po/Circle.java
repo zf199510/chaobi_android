@@ -24,9 +24,48 @@ public class Circle extends BaseEntity {
     private String content; // 内容
 
     private long punchLineId;
-    @OneToMany
-    private List<Picture> pic;
+
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date time;
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public long getPunchLineId() {
+        return punchLineId;
+    }
+
+    public void setPunchLineId(long punchLineId) {
+        this.punchLineId = punchLineId;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
 }

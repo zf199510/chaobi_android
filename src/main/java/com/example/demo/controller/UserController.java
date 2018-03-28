@@ -37,6 +37,7 @@ public class UserController {
     @Transactional(rollbackFor = Exception.class)
     @PostMapping(value = "login", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String login(@RequestParam String name, @RequestParam String pass) {
+        System.out.print(name+"++++++"+pass);
         userResult = new Result();
         Gson gson = new Gson();
         User user = userRepository.getByUsername(name);
